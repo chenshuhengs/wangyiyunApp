@@ -1,0 +1,36 @@
+// flex布局
+.flex(@align:center,@justify:center,@direction:column) {
+    display: flex;
+    align-items: @align;
+    justify-content: @justify;
+    flex-direction: @direction;
+}
+
+// 单行文本溢出
+.singleLine() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// 多行文本溢出
+.manyLine() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+// 动画
+.hideAnimation() {
+    animation: 1s hide forwards;
+    @keyframes hide {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}
